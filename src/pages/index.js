@@ -9,6 +9,7 @@ import Service from '../components/service'
 import Footer from '../components/footer'
 import Room from '../components/room'
 import Price from '../components/price'
+import Attraction from '../components/attraction'
 
 const IndexPage = props => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = props => {
       <Brief />
       <Service />
       <Room />
+      <Attraction />
       <Price />
       <Footer />
     </Layout>

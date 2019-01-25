@@ -181,7 +181,6 @@ class Price extends Component {
                     </Nav>
 
                     <TabContent activeTab={this.state.activeTab}>
-                      {/* <PriceTabeContent ppr={2} index={"1"} /> */}
                       <PriceTabeContent
                         data={data.allContentfulTouristFirm.edges.filter(
                           edge => edge.node.ppr === 2
@@ -206,9 +205,6 @@ class Price extends Component {
                         )}
                         index={'4'}
                       />
-                      {/* <PriceTabeContent ppr={3} index={"2"} />
-                <PriceTabeContent ppr={4} index={"3"} />
-                <PriceTabeContent ppr={6} index={"4"} /> */}
                     </TabContent>
                   </Col>
                 </Row>

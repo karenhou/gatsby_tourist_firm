@@ -41,9 +41,7 @@ export default props => (
             <h6 style={{ marginBottom: '1em', color: 'gray' }}>
               We have wide range of rooms to accompany your needs
             </h6>
-            {/* <Carousel style={{ background: 'white' }} showStatus={false}> */}
             <CarouselRoomPix data={data.allContentfulTouristFirm.edges} />
-            {/* </Carousel> */}
           </Container>
         </MyContainer>
       )

@@ -16,7 +16,6 @@ const priceTabContent = ({ data, index }) => {
     <TabPane tabId={index}>
       <Row className="my-4">
         {data.map((edge, i) => {
-          console.log('edge ', edge)
           return (
             <Card
               key={i}

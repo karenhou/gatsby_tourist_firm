@@ -24,6 +24,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
+    "react-flippy": "^0.1.2",
     "react-helmet": "^5.2.0",
     "react-i18next": "^9.0.7",
     "react-reveal": "^1.2.2",
