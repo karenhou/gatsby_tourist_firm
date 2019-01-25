@@ -81,7 +81,6 @@ export default props => (
 
           <Row>
             <AttractionItems data={data} />
-            {/* {flipContent} */}
           </Row>
         </Container>
       </MyContainer>

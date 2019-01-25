@@ -12,7 +12,6 @@ const MyContainer = styled.section`
 `
 
 export default props => (
-  // <h1>Hello</h1>
   <StaticQuery
     query={graphql`
       query {

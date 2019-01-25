@@ -14,7 +14,18 @@ import Attraction from '../components/attraction'
 const IndexPage = props => {
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="Home"
+        keywords={[
+          `gatsby`,
+          `application`,
+          `react`,
+          `Contentful`,
+          `Taiwan`,
+          `Green Island`,
+          `Luti`,
+        ]}
+      />
       <Landing />
       <Brief />
       <Service />
