@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import QRCode from './qrcode'
 
 const MyContainer = styled.footer`
   color: white;
@@ -202,11 +203,7 @@ const Footer = () => {
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </Col>
           <Col xs={12} md={6} lg={3}>
-            <img
-              style={{ width: '200px' }}
-              src="http://qr-official.line.me/L/l-MzFRQZBx.png"
-              alt="lineQR"
-            />
+            <QRCode />
           </Col>
         </Row>
       </Container>
