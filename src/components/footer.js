@@ -191,7 +191,7 @@ const Footer = () => {
               <SocialATag href="https://www.facebook.com/%E7%B6%A0%E5%B3%B6%E7%B6%A0%E5%A0%A4%E6%BF%B1%E6%B5%B7%E6%97%85%E5%BA%97%E7%B6%A0%E5%A0%A4%E5%92%96%E5%95%A1%E9%A4%A8-300112960113605/">
                 <i className="fab fa-weixin fa-lg" />
               </SocialATag>
-              <SocialATag href="mailto:someone@yoursite.com?subject=Mail from Our Site&body=Please specify the desire date and room type, we'll get back to you soon. Or contact us through Line or wechat for quicker response">
+              <SocialATag href="mailto:someone@yoursite.com?cc=karen@youngmarch.com.tw?subject=Mail from Our Site&body=Please specify the desire date and room type, we'll get back to you soon. Or contact us through Line or wechat for quicker response">
                 <i className="fas fa-envelope fa-lg" />
               </SocialATag>
               <SocialATag href="https://line.me/R/ti/p/%40eyh4755r">

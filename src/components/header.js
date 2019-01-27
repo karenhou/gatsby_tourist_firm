@@ -10,14 +10,11 @@ import {
   UncontrolledDropdown,
 } from 'reactstrap'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
+import { StaticQuery, graphql } from 'gatsby'
 
 const MyHeader = styled.header`
   font-family: 'Bungee Inline', cursive;
-`
-
-const Logo = styled.h1`
-  color: blue;
-  font-family: 'Lobster', cursive;
 `
 
 const MyNav = styled.h5`
@@ -43,8 +40,23 @@ export default props => {
   return (
     <MyHeader>
       <Navbar dark expand="md">
-        <NavbarBrand href="/">
-          <Logo>Luti</Logo>
+        <NavbarBrand style={{ flexGrow: '1' }}>
+          <StaticQuery
+            query={graphql`
+              query {
+                placeholderImage: file(relativePath: { eq: "luti_logo1.png" }) {
+                  childImageSharp {
+                    fixed(width: 60) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
+            `}
+            render={data => (
+              <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+            )}
+          />
         </NavbarBrand>
         <NavbarToggler onClick={() => set(state => !state)} />
         <Collapse isOpen={isOpen} navbar>
