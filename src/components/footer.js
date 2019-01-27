@@ -28,8 +28,20 @@ const Image = styled(Img)`
     height: 550px;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (min-width: 415px) and (max-width: 767px) {
     height: 100vh;
+  }
+
+  @media only screen and (min-width: 376px) and (max-width: 414px) {
+    height: 110vh;
+  }
+
+  @media only screen and (min-width: 355px) and (max-width: 375px) {
+    height: 130vh;
+  }
+
+  @media only screen and (max-width: 354px) {
+    height: 150vh;
   }
 `
 
