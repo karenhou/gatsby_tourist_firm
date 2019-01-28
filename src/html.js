@@ -20,28 +20,14 @@ export default class HTML extends React.Component {
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
             crossOrigin="anonymous"
           />
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/6.0.1/reactstrap.full.min.js" />
-          <script
-            type="text/javascript"
-            src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-          />
-          <script
-            type="text/javascript"
-            src="//cdnjs.cloudflare.com/ajax/libs/react-popper/0.10.4/umd/react-popper.min.js"
-          />
           <link
             href="https://fonts.googleapis.com/css?family=Bungee+Inline|Lobster"
             rel="stylesheet"
           />
-          <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-            crossOrigin="anonymous"
-          />
           <link rel="shortcut icon" href={favicon} />
         </head>
         <body {...this.props.bodyAttributes}>
+          <noscript>You need to enable JavaScript to run this app.</noscript>
           {this.props.preBodyComponents}
           <div
             key={`body`}

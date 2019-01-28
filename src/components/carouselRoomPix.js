@@ -6,12 +6,12 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from 'reactstrap'
-import { Trans } from 'react-i18next'
+import { withNamespaces } from 'react-i18next'
 
-export default class carouselRoomPix extends Component {
+class CarouselRoomPix extends Component {
   constructor(props) {
     super(props)
-    this.state = { activeIndex: 0, length: 0 }
+    this.state = { activeIndex: 0, length: 0, items: [] }
     this.next = this.next.bind(this)
     this.previous = this.previous.bind(this)
     this.goToIndex = this.goToIndex.bind(this)
@@ -19,8 +19,20 @@ export default class carouselRoomPix extends Component {
     this.onExited = this.onExited.bind(this)
   }
   componentDidMount() {
+    let tempArray = []
     if (this.props.data) {
-      this.setState({ length: this.props.data.length })
+      this.props.data.forEach(d => {
+        let tempData = {
+          key: d.node.photo.id,
+          src: d.node.photo.file.url,
+          caption: d.node.roomType,
+        }
+        tempArray.push(tempData)
+      })
+      this.setState({
+        length: this.props.data.length,
+        items: [...tempArray],
+      })
     }
   }
 
@@ -57,44 +69,54 @@ export default class carouselRoomPix extends Component {
 
   render() {
     const { activeIndex } = this.state
-    const slides = this.props.data.map((edge, index) => {
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={edge.node.photo.id}
-        >
-          <img src={edge.node.photo.file.url} alt={edge.node.roomType} />
-          <CarouselCaption
-            captionHeader={<Trans>{edge.node.roomType}</Trans>}
-          />
-        </CarouselItem>
-      )
-    })
+    let slides = ''
+    if (this.state.items) {
+      slides = this.state.items.map(edge => {
+        return (
+          <CarouselItem
+            onExiting={this.onExiting}
+            onExited={this.onExited}
+            key={edge.key}
+          >
+            <img src={edge.src} alt={edge.caption} style={{ width: '100%' }} />
+            <CarouselCaption captionText={this.props.t(edge.caption)} />
+          </CarouselItem>
+        )
+      })
+    } else {
+      slides = <h1>Loading...</h1>
+    }
 
-    return (
-      <Carousel
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-      >
-        <CarouselIndicators
-          items={this.props.data}
+    if (this.state.items) {
+      return (
+        <Carousel
           activeIndex={activeIndex}
-          onClickHandler={this.goToIndex}
-        />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={this.previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={this.next}
-        />
-      </Carousel>
-    )
+          next={this.next}
+          previous={this.previous}
+        >
+          <CarouselIndicators
+            items={this.state.items}
+            activeIndex={activeIndex}
+            onClickHandler={this.goToIndex}
+          />
+
+          {slides}
+          <CarouselControl
+            direction="prev"
+            directionText="Previous"
+            onClickHandler={this.previous}
+          />
+          <CarouselControl
+            direction="next"
+            directionText="Next"
+            onClickHandler={this.next}
+          />
+        </Carousel>
+      )
+    } else {
+      return <h1>Loading...X</h1>
+    }
   }
 }
+
+export default withNamespaces()(CarouselRoomPix)

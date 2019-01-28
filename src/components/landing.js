@@ -25,7 +25,6 @@ const H1 = styled.h1`
 `
 class Landing extends Component {
   render() {
-    console.log('in landing', this.props)
     return (
       <div>
         <MyContainer id="home">

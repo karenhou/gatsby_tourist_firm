@@ -59,7 +59,7 @@ export default props => {
             )}
           />
         </NavbarBrand>
-        <NavbarToggler onClick={() => set(state => !state)} />
+        <NavbarToggler onClick={() => set(state => !state)} aria-label='NavToggler'/>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
