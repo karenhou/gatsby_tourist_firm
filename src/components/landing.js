@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import Header from './header'
@@ -23,49 +23,53 @@ const H1 = styled.h1`
     text-align: left;
   }
 `
-
-const Landing = () => {
-  return (
-    <MyContainer id="home">
-      <StaticQuery
-        query={graphql`
-          query {
-            placeholderImage: file(relativePath: { eq: "turtle.jpg" }) {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  ...GatsbyImageSharpFluid
+class Landing extends Component {
+  render() {
+    console.log('in landing', this.props)
+    return (
+      <div>
+        <MyContainer id="home">
+          <StaticQuery
+            query={graphql`
+              query {
+                placeholderImage: file(relativePath: { eq: "turtle.jpg" }) {
+                  childImageSharp {
+                    fluid(maxWidth: 1440) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
               }
-            }
-          }
-        `}
-        render={data => (
-          <Img
-            fluid={data.placeholderImage.childImageSharp.fluid}
-            style={{
-              backgroundSize: 'cover',
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              width: '100%',
-              height: '110vh',
-            }}
+            `}
+            render={data => (
+              <Img
+                fluid={data.placeholderImage.childImageSharp.fluid}
+                style={{
+                  backgroundSize: 'cover',
+                  position: 'absolute',
+                  left: 0,
+                  top: 0,
+                  width: '100%',
+                  height: '110vh',
+                }}
+              />
+            )}
           />
-        )}
-      />
-      <Header />
-      <Container>
-        <Row style={{ height: '100vh' }}>
-          <Col xs={12} className="text-center m-auto">
-            <Fade big>
-              <H1>Luti</H1>
-              <H1>Seashore</H1>
-            </Fade>
-          </Col>
-        </Row>
-      </Container>
-    </MyContainer>
-  )
+          <Header onLanChange={x => this.props.onLanChange(x)} />
+          <Container>
+            <Row style={{ height: '100vh' }}>
+              <Col xs={12} className="text-center m-auto">
+                <Fade big>
+                  <H1>Luti</H1>
+                  <H1>Seashore</H1>
+                </Fade>
+              </Col>
+            </Row>
+          </Container>
+        </MyContainer>
+      </div>
+    )
+  }
 }
 
 export default Landing

@@ -19,6 +19,7 @@
     "gatsby-source-contentful": "^2.0.26",
     "gatsby-source-filesystem": "^2.0.1-rc.6",
     "gatsby-transformer-sharp": "^2.1.10",
+    "i18next": "^14.0.1",
     "i18next-browser-languagedetector": "^2.2.4",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",

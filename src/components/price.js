@@ -12,6 +12,7 @@ import classnames from 'classnames'
 import PriceTabeContent from './priceTabContent'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
+import { Trans } from 'react-i18next'
 
 const MyContainer = styled.section`
   margin-top: 7em;
@@ -84,47 +85,72 @@ class Price extends Component {
                 <Row className="ml-1">
                   <Col xs={12} lg={4}>
                     <Row className="mb-3 mr-1">
-                      <h1>Package Deal</h1>
+                      <h1>
+                        <Trans>Package Deal</Trans>
+                      </h1>
                       <ul className="pl-3" style={{ color: 'gray' }}>
                         <li>
-                          125cc Scooter, 2 people per scooter, gasoline not
-                          included
-                        </li>
-                        <li>Free breakfast + one meal @ our cafe</li>
-                        <li>
-                          Select one activity from the following Scuba diving,
-                          Hot Spring, and Glass ship
+                          <Trans>
+                            125cc Scooter, 2 people per scooter, gasoline not
+                            included
+                          </Trans>
                         </li>
                         <li>
-                          Round trip pickup from the ferry terminal to hotel
+                          <Trans>Free breakfast + one meal @ our cafe</Trans>
                         </li>
                         <li>
-                          Special guide for day and night tour around the island
+                          <Trans>
+                            Select one activity from the following Scuba diving,
+                            Hot Spring, and Glass ship
+                          </Trans>
                         </li>
                         <li>
-                          Extra $400NTD per person need to be added during
-                          holidays
+                          <Trans>
+                            Round trip pickup from the ferry terminal to hotel
+                          </Trans>
                         </li>
                         <li>
-                          Holiday include Saturdays and one day before any
-                          public holidays
+                          <Trans>
+                            Special guide for day and night tour around the
+                            island
+                          </Trans>
                         </li>
                         <li>
-                          Motorcycle driver license issued by Taiwanese
-                          government is needed，If you do not have one, please
-                          rent electrical motorbikes(extra $200NTD per person)
+                          <Trans>
+                            Extra $400NTD per person need to be added during
+                            holidays
+                          </Trans>
                         </li>
                         <li>
-                          If you rent electrical motorbike or electrical bike,
-                          night tour will not be arranged due to circumstances
+                          <Trans>
+                            Holiday include Saturdays and one day before any
+                            public holidays
+                          </Trans>
                         </li>
-                        <li>Ferry Ticket: $920 NTD</li>
+                        <li>
+                          <Trans>
+                            Motorcycle driver license issued by Taiwanese
+                            government is needed，If you do not have one, please
+                            rent electrical motorbikes(extra $200NTD per person)
+                          </Trans>
+                        </li>
+                        <li>
+                          <Trans>
+                            If you rent electrical motorbike or electrical bike,
+                            night tour will not be arranged due to circumstances
+                          </Trans>
+                        </li>
+                        <li>
+                          <Trans>Ferry Ticket</Trans>: $920NTD
+                        </li>
                       </ul>
                       <a
                         href="mailto:someone@yoursite.com?subject=Mail from Our Site&body=Please specify the desire date and room type, we'll get back to you soon. Or contact us through Line or wechat for quicker response"
                         style={{ width: '100%' }}
                       >
-                        <MyButton>Contact Us via email for details</MyButton>
+                        <MyButton>
+                          <Trans>Contact Us via email for details</Trans>
+                        </MyButton>
                       </a>
                     </Row>
                   </Col>
@@ -139,7 +165,7 @@ class Price extends Component {
                             this.toggle('1')
                           }}
                         >
-                          2 people
+                          2 <Trans>people</Trans>
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -151,7 +177,7 @@ class Price extends Component {
                             this.toggle('2')
                           }}
                         >
-                          3 people
+                          3 <Trans>people</Trans>
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -163,7 +189,7 @@ class Price extends Component {
                             this.toggle('3')
                           }}
                         >
-                          4 people
+                          4 <Trans>people</Trans>
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -175,7 +201,7 @@ class Price extends Component {
                             this.toggle('4')
                           }}
                         >
-                          6 people
+                          6 <Trans>people</Trans>
                         </NavLink>
                       </NavItem>
                     </Nav>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -10,31 +10,39 @@ import Footer from '../components/footer'
 import Room from '../components/room'
 import Price from '../components/price'
 import Attraction from '../components/attraction'
+import { translate } from 'react-i18next'
 
-const IndexPage = props => {
-  return (
-    <Layout>
-      <SEO
-        title="Home"
-        keywords={[
-          `gatsby`,
-          `application`,
-          `react`,
-          `Contentful`,
-          `Taiwan`,
-          `Green Island`,
-          `Luti`,
-        ]}
-      />
-      <Landing />
-      <Brief />
-      <Service />
-      <Room />
-      <Attraction />
-      <Price />
-      <Footer />
-    </Layout>
-  )
+class IndexPage extends Component {
+  render() {
+    const { i18n } = this.props
+
+    const changeLanguage = lng => {
+      i18n.changeLanguage(lng)
+    }
+    return (
+      <Layout>
+        <SEO
+          title="Home"
+          keywords={[
+            `gatsby`,
+            `application`,
+            `react`,
+            `Contentful`,
+            `Taiwan`,
+            `Green Island`,
+            `Luti`,
+          ]}
+        />
+        <Landing onLanChange={x => changeLanguage(x)} />
+        <Brief />
+        <Service />
+        <Room />
+        <Attraction />
+        <Price />
+        <Footer />
+      </Layout>
+    )
+  }
 }
 
-export default IndexPage
+export default translate('translations')(IndexPage)

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import { Card, CardTitle, CardText, Container, Col, Row } from 'reactstrap'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
+import { Trans } from 'react-i18next'
 
 const MyContainer = styled.section`
   padding-top: 2em;
@@ -70,12 +71,16 @@ export default props => (
       <MyContainer id="attraction">
         <Container>
           <Row className="justify-content-center">
-            <h1>Attractions</h1>
+            <h1>
+              <Trans>Attractions</Trans>
+            </h1>
           </Row>
 
           <Row className="justify-content-center mb-3">
             <h6 style={{ color: 'gray' }}>
-              Here are some of the popular tourist spots on Green Island{' '}
+              <Trans>
+                Here are some of the popular tourist spots on Green Island
+              </Trans>
             </h6>
           </Row>
 

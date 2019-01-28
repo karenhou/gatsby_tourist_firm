@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col, Card } from 'reactstrap'
 import Slide from 'react-reveal/Slide'
+import { Trans } from 'react-i18next'
 
 const MyContainer = styled.section`
   margin-top: 3em;
@@ -18,13 +19,17 @@ const Brief = () => {
     <MyContainer id="brief">
       <Container>
         <Row className="justify-content-center">
-          <h1>We're here for you</h1>
+          <h1>
+            <Trans>We're here for you</Trans>
+          </h1>
         </Row>
         <Row
           className="justify-content-center"
           style={{ marginBottom: '1em', color: 'gray' }}
         >
-          <h6>We exist to enhance your experience at Green Island</h6>
+          <h6>
+            <Trans>We exist to enhance your experience at Green Island</Trans>
+          </h6>
         </Row>
 
         <Row className="m-auto">
@@ -48,8 +53,12 @@ const Brief = () => {
                   />
                 </Col>
                 <Col className="my-1 ml-4 mr-2">
-                  <h3 className="mt-3">Professional</h3>
-                  <Desc>We provide the best customer service around</Desc>
+                  <h3 className="mt-3">
+                    <Trans>Professional</Trans>
+                  </h3>
+                  <Desc>
+                    <Trans>We provide the best customer service around</Trans>
+                  </Desc>
                 </Col>
               </Row>
 
@@ -71,10 +80,14 @@ const Brief = () => {
                   />
                 </Col>
                 <Col className="my-1 ml-4 mr-2">
-                  <h3 className="mt-3">Proficiency</h3>
+                  <h3 className="mt-3">
+                    <Trans>Proficiency</Trans>
+                  </h3>
                   <Desc>
-                    We've been doing this for a long time, so we're very good at
-                    what we're doing
+                    <Trans>
+                      We've been doing this for a long time, so we're very good
+                      at what we're doing
+                    </Trans>
                   </Desc>
                 </Col>
               </Row>
@@ -97,10 +110,14 @@ const Brief = () => {
                   />
                 </Col>
                 <Col className="my-1 ml-4 mr-2">
-                  <h3 className="mt-3">Passion</h3>
+                  <h3 className="mt-3">
+                    <Trans>Passion</Trans>
+                  </h3>
                   <Desc>
-                    We were travellers once, but then we found this place and
-                    fell in love with it, so we had to stay
+                    <Trans>
+                      We were travellers once, but then we found this place and
+                      fell in love with it, so we had to stay
+                    </Trans>
                   </Desc>
                 </Col>
               </Row>

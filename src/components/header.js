@@ -12,6 +12,7 @@ import {
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
+import { Trans } from 'react-i18next'
 
 const MyHeader = styled.header`
   font-family: 'Bungee Inline', cursive;
@@ -63,25 +64,33 @@ export default props => {
           <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink href="#service">
-                <MyNav>Service</MyNav>
+                <MyNav>
+                  <Trans>Service</Trans>
+                </MyNav>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#room">
-                <MyNav>Rooms</MyNav>
+                <MyNav>
+                  <Trans>Rooms</Trans>
+                </MyNav>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#attraction">
-                <MyNav>Attraction</MyNav>
+                <MyNav>
+                  <Trans>Attraction</Trans>
+                </MyNav>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#price">
-                <MyNav>Package</MyNav>
+                <MyNav>
+                  <Trans>Package</Trans>
+                </MyNav>
               </NavLink>
             </NavItem>
-            {/* <NavItem>
+            <NavItem>
               <NavLink onClick={() => props.onLanChange('en')}>
                 <MyNav>
                   <Trans>EN</Trans>
@@ -94,7 +103,7 @@ export default props => {
                   <Trans>中文</Trans>
                 </MyNav>
               </NavLink>
-            </NavItem> */}
+            </NavItem>
             <UncontrolledDropdown nav inNavbar />
           </Nav>
         </Collapse>

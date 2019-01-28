@@ -11,6 +11,7 @@ import {
   CardBody,
 } from 'reactstrap'
 import Slide from 'react-reveal/Slide'
+import { Trans } from 'react-i18next'
 
 const MyContainer = styled.section`
   padding-bottom: 5em;
@@ -24,7 +25,9 @@ const Service = () => {
     <MyContainer id="service">
       <Container className="justify-content-center my-auto">
         <Row className="justify-content-center mb-5">
-          <h1 style={{ color: '#0843c0' }}>Services we provide...</h1>
+          <h1 style={{ color: '#0843c0' }}>
+            <Trans>Services we provide...</Trans>
+          </h1>
         </Row>
         <Row className="mt-3">
           <Col xs={12} md={6} lg={4} className="mb-3">
@@ -40,7 +43,9 @@ const Service = () => {
                 <CardBody>
                   <i className="fas fa-utensils fa-4x my-2" />
                   <CardTitle>
-                    <h2>Dinning</h2>
+                    <h2>
+                      <Trans>Dinning</Trans>
+                    </h2>
                   </CardTitle>
                   <CardSubtitle
                     className="mx-2 text-center"
@@ -50,9 +55,9 @@ const Service = () => {
                     className="mx-5 my-4"
                     style={{ fontSize: 'x-large' }}
                   >
-                    Cafe <br />
-                    BBQ <br />
-                    Book restaurants
+                    <Trans>Cafe</Trans> <br />
+                    <Trans>BBQ</Trans> <br />
+                    <Trans>Book restaurants</Trans>
                   </CardText>
                 </CardBody>
               </Card>
@@ -72,7 +77,9 @@ const Service = () => {
                 <CardBody>
                   <i className="fas fa-home fa-4x my-2" />
                   <CardTitle>
-                    <h2>Staying</h2>
+                    <h2>
+                      <Trans>Staying</Trans>
+                    </h2>
                   </CardTitle>
                   <CardSubtitle
                     className="mx-2 text-center"
@@ -82,8 +89,9 @@ const Service = () => {
                     className="mx-5 my-4"
                     style={{ fontSize: 'x-large' }}
                   >
-                    Assist Booking Hostels <br />
-                    Hotels
+                    <Trans>Assist Booking Hostels</Trans>
+                    <br />
+                    <Trans>Hotels</Trans>
                   </CardText>
                 </CardBody>
               </Card>
@@ -103,7 +111,9 @@ const Service = () => {
                 <CardBody>
                   <i className="fas fa-ship fa-4x my-2" />
                   <CardTitle>
-                    <h2>Travelling</h2>
+                    <h2>
+                      <Trans>Travelling</Trans>
+                    </h2>
                   </CardTitle>
                   <CardSubtitle
                     className="mx-2 text-center"
@@ -113,9 +123,11 @@ const Service = () => {
                     className="mx-5 my-4"
                     style={{ fontSize: 'x-large' }}
                   >
-                    Arrange Itinerary <br />
-                    Q&A
-                    <br /> Assist booking ferries
+                    <Trans>Arrange Itinerary</Trans>
+                    <br />
+                    <Trans>Q&A</Trans>
+                    <br />
+                    <Trans>Assist booking ferries</Trans>
                   </CardText>
                 </CardBody>
               </Card>

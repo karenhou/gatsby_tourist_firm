@@ -1,6 +1,7 @@
 import React from 'react'
 import { TabPane, Card, Row, Col } from 'reactstrap'
 import styled from 'styled-components'
+import { Trans } from 'react-i18next'
 
 const Img = styled.img`
   height: 100%;
@@ -32,16 +33,19 @@ const priceTabContent = ({ data, index }) => {
                 </Col>
                 <Col className="m-auto">
                   <h3>
-                    {edge.node.roomType} - ${edge.node.price} per night
+                    <Trans>{edge.node.roomType}</Trans> - ${edge.node.price}{' '}
+                    <Trans>per night</Trans>
                   </h3>
                   {/* <h5>{room.description}</h5> */}
 
                   <Span>
-                    2 days, 1 night: ${edge.node.dayPackage2} per person
+                    2 <Trans>days</Trans>, 1 <Trans>night</Trans>: $
+                    {edge.node.dayPackage2} <Trans>per person</Trans>
                   </Span>
                   <br />
                   <Span>
-                    3 days, 2 night: ${edge.node.dayPackage3} per person
+                    3 <Trans>days</Trans>, 2 <Trans>night</Trans>: $
+                    {edge.node.dayPackage3} <Trans>per person</Trans>
                   </Span>
                 </Col>
               </Row>

@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'reactstrap'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import QRCode from './qrcode'
+import { Trans } from 'react-i18next'
 
 const MyContainer = styled.footer`
   color: white;
@@ -68,22 +69,27 @@ const Footer = () => {
       <Container className="pt-5">
         <Row>
           <Col xs={12} md={12} lg={6}>
-            <h4>Bank info(ATM transfer)</h4>
+            <h4>
+              <Trans>Bank info(ATM transfer)</Trans>
+            </h4>
             <p>
-              Swift Code: 216-0122
+              <Trans>Swift Code</Trans>: 216-0122
               <br />
-              Account number: 170001-00005011
+              <Trans>Account number</Trans>: 170001-00005011
               <br />
-              Bank: Hualien 2nd Credit Cooperative, Taitung Branch
+              <Trans>Bank</Trans>:{' '}
+              <Trans>Hualien 2nd Credit Cooperative, Taitung Branch</Trans>
               <br />
-              Beneficiary: 綠堤休閒事業有限公司
+              <Trans>Beneficiary</Trans>: 綠堤休閒事業有限公司
               <br />
-              Please confirm via calling us after completed transaction
+              <Trans>
+                Please confirm via calling us after completed transaction
+              </Trans>
               <br />
               Tel: 089-672880 or 0936-147087 or 0932-317841
             </p>
             <p>
-              Photo provided by{' '}
+              <Trans>Photo provided by</Trans>{' '}
               <a
                 style={{
                   backgroundColor: 'black',
@@ -169,15 +175,19 @@ const Footer = () => {
               </a>
             </p>
             <p>
-              destinations info provided by{' '}
+              <Trans>Attraction info provided by</Trans>{' '}
               <Atag href="http://okgo.tw/">玩全台灣旅遊網</Atag>
             </p>
           </Col>
           <Col xs={12} md={6} lg={3}>
             <h4>
-              <Atag href="#home">Back to Top</Atag>
+              <Atag href="#home">
+                <Trans>Back to Top</Trans>
+              </Atag>
             </h4>
-            <h4>Follow us on</h4>
+            <h4>
+              <Trans>Follow us on</Trans>
+            </h4>
             <h4>
               <SocialATag href="https://www.facebook.com/%E7%B6%A0%E5%B3%B6%E7%B6%A0%E5%A0%A4%E6%BF%B1%E6%B5%B7%E6%97%85%E5%BA%97%E7%B6%A0%E5%A0%A4%E5%92%96%E5%95%A1%E9%A4%A8-300112960113605/">
                 <i className="fab fa-facebook-square fa-lg" />
@@ -186,7 +196,9 @@ const Footer = () => {
                 <i className="fab fa-flickr fa-lg" />
               </SocialATag>
             </h4>
-            <h4>Contact us on</h4>
+            <h4>
+              <Trans>Contact us on</Trans>
+            </h4>
             <h4>
               <SocialATag href="https://www.facebook.com/%E7%B6%A0%E5%B3%B6%E7%B6%A0%E5%A0%A4%E6%BF%B1%E6%B5%B7%E6%97%85%E5%BA%97%E7%B6%A0%E5%A0%A4%E5%92%96%E5%95%A1%E9%A4%A8-300112960113605/">
                 <i className="fab fa-weixin fa-lg" />

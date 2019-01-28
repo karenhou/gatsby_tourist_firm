@@ -6,6 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from 'reactstrap'
+import { Trans } from 'react-i18next'
 
 export default class carouselRoomPix extends Component {
   constructor(props) {
@@ -64,7 +65,9 @@ export default class carouselRoomPix extends Component {
           key={edge.node.photo.id}
         >
           <img src={edge.node.photo.file.url} alt={edge.node.roomType} />
-          <CarouselCaption captionHeader={edge.node.roomType} />
+          <CarouselCaption
+            captionHeader={<Trans>{edge.node.roomType}</Trans>}
+          />
         </CarouselItem>
       )
     })
