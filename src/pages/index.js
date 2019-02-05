@@ -22,7 +22,7 @@ class IndexPage extends Component {
     return (
       <Layout>
         <SEO
-          title="Home"
+          title="Luti Sea Shore Hotel"
           keywords={[
             `gatsby`,
             `application`,
@@ -31,6 +31,11 @@ class IndexPage extends Component {
             `Taiwan`,
             `Green Island`,
             `Luti`,
+            `Luti Seashore`,
+            `Luti Sea Shore Hotel`,
+            `Seashore`,
+            `Sea Shore`,
+            `Hotel`,
           ]}
         />
         <Landing onLanChange={x => changeLanguage(x)} />
