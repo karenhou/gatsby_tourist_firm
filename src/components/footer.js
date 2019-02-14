@@ -213,7 +213,7 @@ const Footer = () => {
                 <i className="fab fa-weixin fa-lg" />
               </SocialATag>
               <SocialATag
-                href="mailto:lutihotel@gmail.com?cc=karen@youngmarch.com.tw?subject=Mail from Our Site&body=Please specify the desire date and room type, we'll get back to you soon. Or contact us through Line or wechat for quicker response"
+                href="mailto:lutihotel@gmail.com?cc=karen@youngmarch.com.tw?subject=Mail from Our Site&body=Please specify the desire date and room type, we'll get back to you soon. Or contact us through Line or WeChat for quicker response"
                 aria-label="Email"
               >
                 <i className="fas fa-envelope fa-lg" />

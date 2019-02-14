@@ -145,7 +145,7 @@ class Price extends Component {
                         </li>
                       </ul>
                       <a
-                        href="mailto:someone@yoursite.com?subject=Mail from Our Site&body=Please specify the desire date and room type, we'll get back to you soon. Or contact us through Line or wechat for quicker response"
+                        href="mailto:lutihotel@gmail.com?cc=karen@youngmarch.com.tw?subject=Mail from Our Site&body=Please specify the desire date and room type, we'll get back to you soon. Or contact us through Line or WeChat for quicker response"
                         style={{ width: '100%' }}
                       >
                         <MyButton>
