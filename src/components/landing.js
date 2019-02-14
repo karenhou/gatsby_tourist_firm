@@ -10,6 +10,10 @@ const MyContainer = styled.section`
   color: white;
   font-family: 'Lobster', cursive;
 `
+const WrapperH1 = styled.div`
+  margin-top: 5.5em;
+`
+
 const H1 = styled.h1`
   font-size: 200px;
 
@@ -57,10 +61,12 @@ class Landing extends Component {
           <Header onLanChange={x => this.props.onLanChange(x)} />
           <Container>
             <Row style={{ height: '100vh' }}>
-              <Col xs={12} className="text-center m-auto">
+              <Col xs={12} className="text-center">
                 <Fade big>
-                  <H1>Luti</H1>
-                  <H1>Seashore</H1>
+                  <WrapperH1>
+                    <H1>Luti</H1>
+                    <H1>Seashore</H1>
+                  </WrapperH1>
                 </Fade>
               </Col>
             </Row>
