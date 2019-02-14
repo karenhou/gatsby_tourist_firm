@@ -8,11 +8,16 @@ import { Trans } from 'react-i18next'
 const MyContainer = styled.section`
   padding-top: 2em;
   color: #0843c0;
-  font-family: 'Lobster', cursive;
+  font-family: 'Ubuntu', sans-serif;
 `
 const Img = styled.img`
   height: 300px;
   width: 100%;
+`
+
+const H4 = styled.h4`
+  text-align: center;
+  color: gray;
 `
 
 class AttractionItems extends Component {
@@ -77,11 +82,11 @@ export default props => (
           </Row>
 
           <Row className="justify-content-center mb-3">
-            <h6 style={{ color: 'gray' }}>
+            <H4>
               <Trans>
                 Here are some of the popular tourist spots on Green Island
               </Trans>
-            </h6>
+            </H4>
           </Row>
 
           <Row>

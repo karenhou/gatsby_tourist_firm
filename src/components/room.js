@@ -8,8 +8,13 @@ import { Trans } from 'react-i18next'
 const MyContainer = styled.section`
   margin-top: 5em;
   margin-bottom: 5em;
-  font-family: 'Lobster', cursive;
+  font-family: 'Ubuntu', sans-serif;
   color: #0843c0;
+`
+const H4 = styled.h4`
+  text-align: center;
+  color: gray;
+  margin-bottom: 1em;
 `
 
 export default props => (
@@ -40,9 +45,9 @@ export default props => (
             <h1>
               <Trans>Rooms</Trans>
             </h1>
-            <h6 style={{ marginBottom: '1em', color: 'gray' }}>
+            <H4>
               <Trans>We have wide range of rooms to accompany your needs</Trans>
-            </h6>
+            </H4>
             <CarouselRoomPix data={data.allContentfulTouristFirm.edges} />
           </Container>
         </MyContainer>

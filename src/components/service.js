@@ -17,7 +17,7 @@ const MyContainer = styled.section`
   padding-bottom: 5em;
   padding-top: 5em;
   color: white;
-  font-family: 'Lobster', cursive;
+  font-family: 'Ubuntu', sans-serif;
 `
 
 const Service = () => {
@@ -35,7 +35,7 @@ const Service = () => {
               <Card
                 className="text-center"
                 style={{
-                  height: '100%',
+                  height: '22.5em',
                   background: '#0843c0',
                   borderRadius: '20px',
                 }}
@@ -69,7 +69,8 @@ const Service = () => {
               <Card
                 className="text-center"
                 style={{
-                  height: '321px',
+                  // height: '321px',
+                  height: '22.5em',
                   background: '#0843c0',
                   borderRadius: '20px',
                 }}
@@ -103,7 +104,7 @@ const Service = () => {
               <Card
                 className="text-center"
                 style={{
-                  height: '100%',
+                  height: '22.5em',
                   background: '#0843c0',
                   borderRadius: '20px',
                 }}

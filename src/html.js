@@ -21,7 +21,7 @@ export default class HTML extends React.Component {
             crossOrigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Bungee+Inline|Lobster"
+            href="https://fonts.googleapis.com/css?family=Bungee+Inline|Lobster|Ubuntu"
             rel="stylesheet"
           />
           <link rel="shortcut icon" href={favicon} />

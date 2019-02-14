@@ -18,7 +18,7 @@ const MyContainer = styled.section`
   margin-top: 7em;
   margin-bottom: 5em;
   color: #0843c0;
-  font-family: 'Lobster', cursive;
+  font-family: 'Ubuntu', sans-serif;
 `
 
 const MyButton = styled.button`
@@ -88,7 +88,10 @@ class Price extends Component {
                       <h1>
                         <Trans>Package Deal</Trans>
                       </h1>
-                      <ul className="pl-3" style={{ color: 'gray' }}>
+                      <ul
+                        className="pl-3"
+                        style={{ color: 'gray', fontSize: 'larger' }}
+                      >
                         <li>
                           <Trans>
                             125cc Scooter, 2 people per scooter, gasoline not
@@ -165,7 +168,9 @@ class Price extends Component {
                             this.toggle('1')
                           }}
                         >
-                          2 <Trans>people</Trans>
+                          <h4>
+                            2 <Trans>people</Trans>
+                          </h4>
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -177,7 +182,9 @@ class Price extends Component {
                             this.toggle('2')
                           }}
                         >
-                          3 <Trans>people</Trans>
+                          <h4>
+                            3 <Trans>people</Trans>
+                          </h4>
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -189,7 +196,9 @@ class Price extends Component {
                             this.toggle('3')
                           }}
                         >
-                          4 <Trans>people</Trans>
+                          <h4>
+                            4 <Trans>people</Trans>
+                          </h4>
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -201,7 +210,9 @@ class Price extends Component {
                             this.toggle('4')
                           }}
                         >
-                          6 <Trans>people</Trans>
+                          <h4>
+                            6 <Trans>people</Trans>
+                          </h4>
                         </NavLink>
                       </NavItem>
                     </Nav>

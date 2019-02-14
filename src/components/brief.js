@@ -8,10 +8,17 @@ const MyContainer = styled.section`
   margin-top: 3em;
   margin-bottom: 3em;
   color: #0843c0;
-  font-family: 'Lobster', cursive;
+  font-family: 'Ubuntu', sans-serif;
 `
 const Desc = styled.p`
   color: gray;
+  font-size: large;
+`
+
+const H4 = styled.h4`
+  text-align: center;
+  color: gray;
+  margin-bottom: 1em;
 `
 
 const Brief = () => {
@@ -19,21 +26,18 @@ const Brief = () => {
     <MyContainer id="brief">
       <Container>
         <Row className="justify-content-center">
-          <h1>
+          <h1 style={{ textAlign: 'center' }}>
             <Trans>We're here for you</Trans>
           </h1>
         </Row>
-        <Row
-          className="justify-content-center"
-          style={{ marginBottom: '1em', color: 'gray' }}
-        >
-          <h6>
+        <Row className="justify-content-center">
+          <H4>
             <Trans>We exist to enhance your experience at Green Island</Trans>
-          </h6>
+          </H4>
         </Row>
 
         <Row className="m-auto">
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} className="mb-3">
             <Slide left cascade>
               <Row style={{ height: '150px' }}>
                 <Col

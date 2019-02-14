@@ -10,6 +10,7 @@ const Img = styled.img`
 
 const Span = styled.span`
   color: gray;
+  font-size: larger;
 `
 
 const priceTabContent = ({ data, index }) => {
