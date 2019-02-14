@@ -69,7 +69,6 @@ const Service = () => {
               <Card
                 className="text-center"
                 style={{
-                  // height: '321px',
                   height: '22.5em',
                   background: '#0843c0',
                   borderRadius: '20px',
