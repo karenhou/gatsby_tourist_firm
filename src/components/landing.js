@@ -27,7 +27,7 @@ const H1 = styled.h1`
     text-align: left;
   }
 `
-const Landing = () => {
+const Landing = props => {
   return (
     <div>
       <MyContainer id="home">
@@ -57,7 +57,7 @@ const Landing = () => {
             />
           )}
         />
-        <Header onLanChange={x => this.props.onLanChange(x)} />
+        <Header onLanChange={x => props.onLanChange(x)} />
         <Container>
           <Row style={{ height: '100vh' }}>
             <Col xs={12} className="text-center">

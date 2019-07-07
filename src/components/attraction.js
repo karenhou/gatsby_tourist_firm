@@ -23,7 +23,7 @@ const H4 = styled.h4`
 class AttractionItems extends Component {
   render() {
     const { data } = this.props
-    return data.allContentfulAttractions.edges.map((edge, index) => {
+    return data.map((place, index) => {
       return (
         <Col xs={12} md={12} lg={6} key={index} className="mb-2">
           <Flippy
@@ -37,13 +37,13 @@ class AttractionItems extends Component {
           >
             <FrontSide style={{ padding: 0 }}>
               <Card body>
-                <Img src={edge.node.photo.file.url} alt={edge.node.name} />
+                <Img src={place.node.photo.file.url} alt={place.node.name} />
               </Card>
             </FrontSide>
             <BackSide style={{ padding: 0, height: '100%' }}>
               <Card body style={{ height: '100%' }}>
-                <CardTitle>{edge.node.name}</CardTitle>
-                <CardText>{edge.node.description}</CardText>
+                <CardTitle>{place.node.name}</CardTitle>
+                <CardText>{place.node.description}</CardText>
               </Card>
             </BackSide>
           </Flippy>
@@ -90,7 +90,7 @@ export default props => (
           </Row>
 
           <Row>
-            <AttractionItems data={data} />
+            <AttractionItems data={data.allContentfulAttractions.edges} />
           </Row>
         </Container>
       </MyContainer>

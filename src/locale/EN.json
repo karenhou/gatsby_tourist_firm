@@ -1,4 +1,5 @@
 {
+  "EN": "EN",
   "We're here for you": "We're here for you",
   "We exist to enhance your experience at Green Island": "We exist to enhance your experience at Green Island",
   "Professional": "Professional",
@@ -11,6 +12,7 @@
   "Rooms": "Rooms",
   "Attractions": "Attractions",
   "Package": "Package",
+  "Package Deal": "Package Deal",
   "Services we provide...": "Services we provide...",
   "Dinning": "Dinning",
   "Cafe": "Cafe",
@@ -44,5 +46,23 @@
   "Premium Triple": "Premium Triple",
   "Premium Double Double": "Premium Double Double",
   "Standard Double Double": "Standard Double Double",
-  "VIP Family Room": "VIP Family Room"
+  "VIP Family Room": "VIP Family Room",
+  "days": "days",
+  "Ferry Ticket": "Ferry Ticket",
+  "Contact Us via email for details": "Contact Us via email for details",
+  "people": "people",
+  "per night": "per night",
+  "per person": "per person",
+  "night": "night",
+  "If you rent electrical motorbike or electrical bike, night tour will not be arranged due to circumstances": "If you rent electrical motorbike or electrical bike, night tour will not be arranged due to circumstances",
+  "中文": "中文",
+  "Here are some of the popular tourist spots on Green Island": "Here are some of the popular tourist spots on Green Island",
+  "Holiday include Saturdays and one day before any public holidays": "Holiday include Saturdays and one day before any public holidays",
+  "Extra $400NTD per person need to be added during holidays": "Extra $400NTD per person need to be added during holidays",
+  "Special guide for day and night tour around the island": "Special guide for day and night tour around the island",
+  "Round trip pickup from the ferry terminal to hotel": "Round trip pickup from the ferry terminal to hotel",
+  "Select one activity from the following Scuba diving, Hot Spring, and Glass ship": "Select one activity from the following Scuba diving, Hot Spring, and Glass ship",
+  "Free breakfast + one meal @ our cafe": "Free breakfast + one meal @ our cafe",
+  "125cc Scooter, 2 people per scooter, gasoline not included": "125cc Scooter, 2 people per scooter, gasoline not included",
+  "Motorcycle driver license issued by Taiwanese government is needed，If you do not have one, please rent electrical motorbikes(extra $200NTD per person)": "Motorcycle driver license issued by Taiwanese government is needed，If you do not have one, please rent electrical motorbikes(extra $200NTD per person)"
 }
